@@ -25,7 +25,7 @@ class RegisterController extends Controller
         		'birthday' => $request->birthday[$key],
         		'contact_number' => $request->contact_number[$key],
         		'email_address' => $request->email_address[$key],
-        		'shirt_size' => $request->shirt_size[$key],
+        		'shirt_size' => $request->shirt_size[$key]
         	];
         	$participant = $this->participants->create_participant($create);
 
