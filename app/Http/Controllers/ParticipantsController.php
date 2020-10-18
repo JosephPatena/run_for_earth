@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Participants;
 use Session;
+use App\Exports\ParticipantsExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ParticipantsController extends Controller
 {
@@ -21,5 +23,9 @@ class ParticipantsController extends Controller
     public function participants(){
     	$participants = $this->participants->all_participants();
     	return view('participants', compact('participants'));
+    }
+
+    public function export_particpants(){
+        return Excel::download(new ParticipantsExport, 'participants.csv');
     }
 }

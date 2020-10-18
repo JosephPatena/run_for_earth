@@ -44,7 +44,7 @@
 										<td><a>Contact Persons</a></td>
 									</tr>
 								</table>
-								<button class="btn btn-secondary btn-sm">Export Participants</button>
+								<a href="{{ route('export_particpants') }}" class="btn btn-secondary btn-sm">Export Participants</a>
 							</div>
 							<div class="col-md-10">
 								<div class="table-responsive" style="background-color: #ffffff">

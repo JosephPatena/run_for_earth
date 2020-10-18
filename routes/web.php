@@ -20,3 +20,4 @@ Route::get('/', function () {
 Route::post('register', 'App\Http\Controllers\RegisterController@register')->name('register');
 Route::get('congratulation', 'App\Http\Controllers\ParticipantsController@congratulation')->name('congratulation');
 Route::get('participants', 'App\Http\Controllers\ParticipantsController@participants')->name('participants');
+Route::get('export-particpants', 'App\Http\Controllers\ParticipantsController@export_particpants')->name('export_particpants');
